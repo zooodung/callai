@@ -1,0 +1,282 @@
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body,
+html {
+  height: 100%;
+  /* body와 html 높이를 화면 전체로 설정 */
+  margin: 0;
+  /* 기본 마진 제거 */
+  background-color: #DAE0EE;
+  /* 하늘색 배경 */
+}
+
+#left-half {
+  width: 50%;
+  /* 각 영역 너비 50% */
+  height: 100%;
+  /* 각 영역 높이 100% */
+  float: left;
+  /* 왼쪽으로 플로팅 */
+}
+
+#left-half img {
+  width: 700px;
+  height: 700px;
+  display: block;
+  /* 인라인 요소를 블록 요소로 변환 */
+  margin: auto;
+  /* 자동으로 가운데 정렬 */
+  margin-top: 100px;
+}
+
+
+#center-half {
+  width: 40%;
+  height: 100%;
+  /* 각 영역 높이 100% */
+  float: left;
+  /* 왼쪽으로 플로팅 */
+  background-color: rgb(78, 78, 78);
+  /* 배경색 추가 (원하는 색상 및 불투명도 설정) */
+  box-shadow: 4px 4px 6px rgba(56, 56, 56, 0.5),
+    /* 아래쪽, 오른쪽 그림자 */
+    -4px 4px 6px rgba(91, 91, 92, 0.5),
+    /* 아래쪽, 왼쪽 그림자 */
+    4px -4px 6px rgba(91, 91, 92, 0.5),
+    /* 위쪽, 오른쪽 그림자 */
+    -4px -4px 6px rgba(91, 91, 92, 0.5);
+  /* 위쪽, 왼쪽 그림자 */
+  display: flex;
+  /* Flexbox 사용 */
+  flex-direction: column;
+  /* 세로 방향 배치 */
+  justify-content: center;
+  /* 세로 중앙 정렬 */
+  align-items: center;
+  /* 가로 중앙 정렬 */
+  border-radius: 110px;
+  background-image: url('phone_background.png');
+  /* 이미지 경로 설정 */
+  background-size: cover;
+  /* 이미지 크기 조절 */
+  background-repeat: no-repeat;
+  /* 이미지 반복 방지 */
+  background-blend-mode: multiply;
+  /* 이미지와 배경색 혼합 */
+}
+
+
+#right-half {
+  width: 10%;
+  /* 각 영역 너비 50% */
+  height: 100%;
+  /* 각 영역 높이 100% */
+}
+
+.status-bar {
+  display: flex;
+  /* 아이템들을 가로로 정렬 */
+  justify-content: space-between;
+  /* 양쪽 끝으로 정렬 */
+  align-items: center;
+  /* 수직 가운데 정렬 */
+  padding: 10px;
+  /* 내부 여백 추가 */
+  margin-top: -115px;
+}
+
+/* 시간 스타일 */
+#current-time {
+  font-family: 'GmarketSansMedium', sans-serif;
+  font-size: 26px;
+  margin-top: 12px;
+  color: rgb(219, 218, 218);
+}
+
+#dynamic-island {
+  width: 150px;
+  /* 아이콘 크기 조절 */
+  height: 150px;
+  margin-left: 120px;
+  margin-right: 55px;
+}
+
+/* 아이콘 스타일 */
+#wifi-icon {
+  width: 50px;
+  /* 아이콘 크기 조절 */
+  height: 45px;
+  margin-left: 8%;
+  margin-right: 40px;
+}
+
+#battery-icon {
+  width: 45px;
+  /* 아이콘 크기 조절 */
+  height: 45px;
+}
+
+.setting-container {
+  width: 80%;
+  height: 700px;
+  background-color: rgba(240, 248, 255, 0.37);
+  border-radius: 100px;
+
+  position: relative;
+  /* 부모 요소를 상대 위치로 설정 */
+  display: flex;
+  align-items: flex-start;
+  /* 세로 정렬 유지 */
+  justify-content: center;
+  /* 자식 요소를 가로 방향으로 가운데 정렬 */
+}
+
+
+.home-button {
+  width: 110px;
+  height: 110px;
+  margin-top: 550px;
+  flex-shrink: 0;
+  /* 축소 방지 */
+  background-color: transparent;
+  position: absolute;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.home-button img {
+  width: 100%;
+  height: 100%;
+  transition: filter 0.3s ease;
+  /* Smooth transition for the glow effect */
+}
+
+.home-button:hover img {
+  filter: drop-shadow(0 0 5px rgb(251, 251, 251));
+  /* Glow effect */
+  transform: translateY(-1px);
+}
+
+#profile-name {
+  font-family: 'GmarketSansMedium', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  /* 굵게 */
+  color: rgb(245, 245, 245);
+  margin-top: 50px;
+  word-wrap: break-word;
+  /* 또는 overflow-wrap: break-word; */
+  text-align: center;
+  /* 텍스트 가운데 정렬 추가 */
+}
+
+.mic-button {
+  width: 200px;
+  height: 200px;
+  margin-top: 200px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  /* 축소 방지 */
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  box-shadow: 3px 3px 5px rgba(6, 103, 176, 0.769),
+    /* 아래쪽, 오른쪽 그림자 */
+    -3px 3px 5px rgba(6, 103, 176, 0.769),
+    /* 아래쪽, 왼쪽 그림자 */
+    3px -3px 5px rgba(6, 103, 176, 0.769),
+    /* 위쪽, 오른쪽 그림자 */
+    -3px -3px 5px rgba(6, 103, 176, 0.769);
+  /* 위쪽, 왼쪽 그림자 */
+}
+
+.mic-button img {
+  width: 100%;
+  height: 100%;
+  transition: filter 0.3s ease;
+  /* Smooth transition for the glow effect */
+}
+
+.mic-button:hover img {
+  filter: drop-shadow(0 0 5px rgb(252, 252, 252));
+  /* Glow effect */
+  transform: translateY(-1px);
+}
+
+.mic-stop-button {
+  width: 200px;
+  height: 200px;
+  margin-top: 200px;
+  flex-shrink: 0;
+  /* 축소 방지 */
+  background-color: transparent;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  box-shadow: 3px 3px 5px rgba(152, 44, 20, 0.911),
+    /* 아래쪽, 오른쪽 그림자 */
+    -3px 3px 5px rgba(152, 44, 20, 0.911),
+    /* 아래쪽, 왼쪽 그림자 */
+    3px -3px 5px rgba(152, 44, 20, 0.911),
+    /* 위쪽, 오른쪽 그림자 */
+    -3px -3px 5px rgba(152, 44, 20, 0.911);
+  /* 위쪽, 왼쪽 그림자 */
+}
+
+.mic-stop-button img {
+  width: 100%;
+  height: 100%;
+  transition: filter 0.3s ease;
+  /* Smooth transition for the glow effect */
+}
+
+.mic-stop-button:hover img {
+  filter: drop-shadow(0 0 5px rgb(29, 28, 28));
+  /* Glow effect */
+  transform: translateY(-1px);
+}
+
+.speaker-button {
+  width: 100px;
+  height: 100px;
+  margin-top: 430px;
+  flex-shrink: 0;
+  /* 축소 방지 */
+  background-color: transparent;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  box-shadow: 3px 3px 5px rgba(215, 215, 215, 0.911),
+    /* 아래쪽, 오른쪽 그림자 */
+    -3px 3px 5px rgba(208, 208, 208, 0.911),
+    /* 아래쪽, 왼쪽 그림자 */
+    3px -3px 5px rgba(210, 210, 210, 0.911),
+    /* 위쪽, 오른쪽 그림자 */
+    -3px -3px 5px rgba(202, 201, 201, 0.911);
+  /* 위쪽, 왼쪽 그림자 */
+}
+
+.speaker-button img {
+  width: 100%;
+  height: 100%;
+  transition: filter 0.3s ease;
+  /* Smooth transition for the glow effect */
+}
+
+.speaker-button:hover img {
+  filter: drop-shadow(0 0 5px rgb(36, 225, 11));
+  /* Glow effect */
+  transform: translateY(-1px);
+}

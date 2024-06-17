@@ -1,0 +1,214 @@
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body,
+html {
+  height: 100%;
+  /* body와 html 높이를 화면 전체로 설정 */
+  margin: 0;
+  /* 기본 마진 제거 */
+  background-color: #DAE0EE;
+  /* 하늘색 배경 */
+}
+
+#left-half {
+  width: 50%;
+  /* 각 영역 너비 50% */
+  height: 100%;
+  /* 각 영역 높이 100% */
+  float: left;
+  /* 왼쪽으로 플로팅 */
+}
+
+#left-half img {
+  width: 700px;
+  height: 700px;
+  display: block;
+  /* 인라인 요소를 블록 요소로 변환 */
+  margin: auto;
+  /* 자동으로 가운데 정렬 */
+  margin-top: 100px;
+}
+
+
+#center-half {
+  width: 40%;
+  height: 100%;
+  /* 각 영역 높이 100% */
+  float: left;
+  /* 왼쪽으로 플로팅 */
+  background-color: rgb(78, 78, 78);
+  /* 배경색 추가 (원하는 색상 및 불투명도 설정) */
+  box-shadow: 4px 4px 6px rgba(56, 56, 56, 0.5),
+    /* 아래쪽, 오른쪽 그림자 */
+    -4px 4px 6px rgba(91, 91, 92, 0.5),
+    /* 아래쪽, 왼쪽 그림자 */
+    4px -4px 6px rgba(91, 91, 92, 0.5),
+    /* 위쪽, 오른쪽 그림자 */
+    -4px -4px 6px rgba(91, 91, 92, 0.5);
+  /* 위쪽, 왼쪽 그림자 */
+  display: flex;
+  /* Flexbox 사용 */
+  flex-direction: column;
+  /* 세로 방향 배치 */
+  justify-content: center;
+  /* 세로 중앙 정렬 */
+  align-items: center;
+  /* 가로 중앙 정렬 */
+  border-radius: 110px;
+  background-image: url('phone_background.png');
+  /* 이미지 경로 설정 */
+  background-size: cover;
+  /* 이미지 크기 조절 */
+  background-repeat: no-repeat;
+  /* 이미지 반복 방지 */
+  background-blend-mode: multiply;
+  /* 이미지와 배경색 혼합 */
+}
+
+
+#right-half {
+  width: 10%;
+  /* 각 영역 너비 50% */
+  height: 100%;
+  /* 각 영역 높이 100% */
+}
+
+.status-bar {
+  display: flex;
+  /* 아이템들을 가로로 정렬 */
+  justify-content: space-between;
+  /* 양쪽 끝으로 정렬 */
+  align-items: center;
+  /* 수직 가운데 정렬 */
+  padding: 10px;
+  /* 내부 여백 추가 */
+  margin-top: -340px;
+  margin-bottom: 200px;
+}
+
+/* 시간 스타일 */
+#current-time {
+  font-family: 'GmarketSansMedium', sans-serif;
+  font-size: 26px;
+  margin-top: 12px;
+  color: rgb(219, 218, 218);
+}
+
+#dynamic-island {
+  width: 150px;
+  /* 아이콘 크기 조절 */
+  height: 150px;
+  margin-left: 120px;
+  margin-right: 55px;
+}
+
+/* 아이콘 스타일 */
+#wifi-icon {
+  width: 50px;
+  /* 아이콘 크기 조절 */
+  height: 45px;
+  margin-left: 8%;
+  margin-right: 40px;
+}
+
+#battery-icon {
+  width: 45px;
+  /* 아이콘 크기 조절 */
+  height: 45px;
+}
+
+.training-container {
+  width: 50%;
+  height: 30%;
+  background-color: rgba(240, 248, 255, 0.37);
+  box-shadow: 4px 4px 6px rgba(56, 56, 56, 0.5),
+    /* 아래쪽, 오른쪽 그림자 */
+    -4px 4px 6px rgba(91, 91, 92, 0.5),
+    /* 아래쪽, 왼쪽 그림자 */
+    4px -4px 6px rgba(91, 91, 92, 0.5),
+    /* 위쪽, 오른쪽 그림자 */
+    -4px -4px 6px rgba(91, 91, 92, 0.5);
+  /* 위쪽, 왼쪽 그림자 */
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.training-container>* {
+  margin-bottom: 10px;
+}
+
+.radio-group {
+  /* 라디오 버튼 그룹을 위한 새로운 클래스 추가 */
+  display: flex;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  flex-direction: column;
+  /* 라디오 버튼들을 세로로 배치 */
+}
+
+.radio-group>div {
+  display: flex;
+  /* 각 라디오 버튼과 레이블을 가로로 배치 */
+  align-items: center;
+}
+
+.training-container label {
+  margin-left: 5px;
+}
+
+.character-input {
+  width: 250px;
+  height: 40px;
+  padding-left: 20px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+  flex-direction: column;
+  /* 세로 방향 배치 */
+  justify-content: center;
+  /* 세로 중앙 정렬 */
+  align-items: center;
+  /* 가로 중앙 정렬 */
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.confirm-button {
+  background-color: #2b27f3;
+  box-shadow: 2px 2px 4px rgba(6, 98, 235, 0.836),
+    /* 아래쪽, 오른쪽 그림자 */
+    -2px 2px 4px rgba(6, 98, 235, 0.836),
+    /* 아래쪽, 왼쪽 그림자 */
+    2px -2px 4px rgba(6, 98, 235, 0.836),
+    /* 위쪽, 오른쪽 그림자 */
+    -2px -2px 4px rgba(6, 98, 235, 0.836);
+  /* 위쪽, 왼쪽 그림자 */
+  justify-content: center;
+  /* 가로 중앙 정렬 */
+  color: white;
+  padding: 12px 20px;
+  margin-top: 30px;
+  display: block;
+  /* 버튼을 블록 요소로 변경하여 가로 너비를 100%로 설정 */
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.confirm-button:hover {
+  background-color: rgba(22, 65, 122, 0.521);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+  color: #ffffff;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  /* 부드러운 전환 효과 */
+}

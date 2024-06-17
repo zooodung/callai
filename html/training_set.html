@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>연습 설정 페이지</title>
+  <link rel="shortcut icon" href="#">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel='stylesheet' type='text/css'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/training_set.css">
+</head>
+<body>
+    <div id="left-half">
+      <img src="assets\images\logo.png" alt="로고 이미지">
+    </div>
+    <div id="center-half">
+      <div class="status-bar"> 
+        <span id="current-time"></span>
+        <img id="dynamic-island" src="assets/images/dynamic_island.png" alt="와이파이">
+        <img id="wifi-icon" src="assets/images/wifi2.png" alt="와이파이">
+        <img id="battery-icon" src="assets/images/battery2.png" alt="배터리">
+      </div>
+      <div class="training-container">
+        <input type="text" class="character-input" placeholder="연습하고 싶은 인물 입력해주세요.">
+        <div class="radio-group"> 
+          <div>
+            <input type="radio" id="informal" name="speech-level" value="반말">
+            <label for="informal">반말</label>
+          </div>
+          <div>
+            <input type="radio" id="formal" name="speech-level" value="존댓말">
+            <label for="formal">존댓말</label>
+          </div>
+        </div>
+        <button class="confirm-button">Let's Training</button>
+      </div>
+    </div>
+    <div id="right-half"></div>
+  <script src="assets/js/training_set.js"></script>
+</body>
+</html>

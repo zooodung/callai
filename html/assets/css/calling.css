@@ -1,0 +1,556 @@
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body,
+html {
+  height: 100%;
+  /* body와 html 높이를 화면 전체로 설정 */
+  margin: 0;
+  /* 기본 마진 제거 */
+  background-color: #DAE0EE;
+  /* 하늘색 배경 */
+}
+
+#left-half {
+  width: 50%;
+  /* 각 영역 너비 50% */
+  height: 100%;
+  /* 각 영역 높이 100% */
+  float: left;
+  /* 왼쪽으로 플로팅 */
+}
+
+#left-half img {
+  width: 700px;
+  height: 700px;
+  display: block;
+  /* 인라인 요소를 블록 요소로 변환 */
+  margin: auto;
+  /* 자동으로 가운데 정렬 */
+  margin-top: 100px;
+}
+
+
+#center-half {
+  width: 40%;
+  height: 100%;
+  /* 각 영역 높이 100% */
+  float: left;
+  /* 왼쪽으로 플로팅 */
+  background-color: rgb(78, 78, 78);
+  /* 배경색 추가 (원하는 색상 및 불투명도 설정) */
+  box-shadow: 4px 4px 6px rgba(56, 56, 56, 0.5),
+    /* 아래쪽, 오른쪽 그림자 */
+    -4px 4px 6px rgba(91, 91, 92, 0.5),
+    /* 아래쪽, 왼쪽 그림자 */
+    4px -4px 6px rgba(91, 91, 92, 0.5),
+    /* 위쪽, 오른쪽 그림자 */
+    -4px -4px 6px rgba(91, 91, 92, 0.5);
+  /* 위쪽, 왼쪽 그림자 */
+  display: flex;
+  /* Flexbox 사용 */
+  flex-direction: column;
+  /* 세로 방향 배치 */
+  justify-content: center;
+  /* 세로 중앙 정렬 */
+  align-items: center;
+  /* 가로 중앙 정렬 */
+  border-radius: 110px;
+  background-image: url('phone_background.png');
+  /* 이미지 경로 설정 */
+  background-size: cover;
+  /* 이미지 크기 조절 */
+  background-repeat: no-repeat;
+  /* 이미지 반복 방지 */
+  background-blend-mode: multiply;
+  /* 이미지와 배경색 혼합 */
+}
+
+
+#right-half {
+  width: 10%;
+  /* 각 영역 너비 50% */
+  height: 100%;
+  /* 각 영역 높이 100% */
+}
+
+.status-bar {
+  display: flex;
+  /* 아이템들을 가로로 정렬 */
+  justify-content: space-between;
+  /* 양쪽 끝으로 정렬 */
+  align-items: center;
+  /* 수직 가운데 정렬 */
+  padding: 10px;
+  /* 내부 여백 추가 */
+  margin-top: -55px;
+}
+
+/* 시간 스타일 */
+#current-time {
+  font-family: 'GmarketSansMedium', sans-serif;
+  font-size: 26px;
+  margin-top: 12px;
+  color: rgb(219, 218, 218);
+}
+
+#dynamic-island {
+  width: 150px;
+  /* 아이콘 크기 조절 */
+  height: 150px;
+  margin-left: 120px;
+  margin-right: 55px;
+}
+
+/* 아이콘 스타일 */
+#wifi-icon {
+  width: 50px;
+  /* 아이콘 크기 조절 */
+  height: 45px;
+  margin-left: 8%;
+  margin-right: 40px;
+}
+
+#battery-icon {
+  width: 45px;
+  /* 아이콘 크기 조절 */
+  height: 45px;
+}
+
+.calling-container {
+  width: 80%;
+  height: 800px;
+  margin-top: -30px;
+  background-color: rgba(240, 248, 255, 0.37);
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  /* 세로 방향으로 정렬 */
+  justify-content: center;
+  /* 주 축(세로) 중앙 정렬 */
+  align-items: center;
+  /* 교차 축(가로) 중앙 정렬 */
+  box-shadow: 4px 4px 6px rgb(27, 28, 28),
+    /* 아래쪽, 오른쪽 그림자 */
+    -4px 4px 6px rgb(27, 28, 28),
+    /* 아래쪽, 왼쪽 그림자 */
+    4px -4px 6px rgb(27, 28, 28),
+    /* 위쪽, 오른쪽 그림자 */
+    -4px -4px 6px rgb(27, 28, 28);
+  /* 위쪽, 왼쪽 그림자 */
+}
+
+.chat-box {
+  width: 90%;
+  height: 55%;
+  padding-top: 50px;
+  position: relative;
+  /* 자식 요소의 절대 위치 기준 설정 */
+  overflow-y: auto;
+  /* 세로 스크롤바 생성 */
+  display: flex;
+  flex-direction: column;
+  /* 세로 방향 정렬 */
+}
+
+.chat-box::-webkit-scrollbar {
+  display: none;
+  /* 크롬, 사파리, 오페라 */
+}
+
+.user-box {
+  width: 100%;
+  height: 45%;
+  background-color: rgb(63, 63, 63);
+  filter: drop-shadow(0px -4px 6px rgb(81, 82, 82));
+  /* 위쪽 그림자 */
+  border-bottom-left-radius: 100px;
+  /* 왼쪽 아래 */
+  border-bottom-right-radius: 100px;
+  /* 오른쪽 아래 */
+}
+
+.send-box {
+  display: flex;
+  /* Flexbox 컨테이너로 설정 */
+  align-items: center;
+  /* 세로 중앙 정렬 */
+  padding: 20px;
+}
+
+.text-box {
+  width: 420px;
+  height: 50px;
+  border-radius: 30px;
+  padding: 20px;
+  margin-right: 20px;
+  background-color: rgb(28, 31, 31);
+  box-shadow: 4px 4px 6px rgb(27, 28, 28),
+    /* 아래쪽, 오른쪽 그림자 */
+    -4px 4px 6px rgb(27, 28, 28),
+    /* 아래쪽, 왼쪽 그림자 */
+    4px -4px 6px rgb(27, 28, 28),
+    /* 위쪽, 오른쪽 그림자 */
+    -4px -4px 6px rgb(27, 28, 28);
+  /* 위쪽, 왼쪽 그림자 */
+  color: #ebeaea;
+  font-family: 'GmarketSansMedium', sans-serif;
+  font-weight: bold;
+  overflow-y: auto;
+  /* 세로 스크롤바 생성 */
+}
+
+.text-box::-webkit-scrollbar {
+  display: none;
+  /* 크롬, 사파리, 오페라 */
+}
+
+.mic-button {
+  width: 50px;
+  margin-right: 20px;
+  height: 50px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  /* 축소 방지 */
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 3px 3px 5px rgba(6, 103, 176, 0.769),
+    /* 아래쪽, 오른쪽 그림자 */
+    -3px 3px 5px rgba(6, 103, 176, 0.769),
+    /* 아래쪽, 왼쪽 그림자 */
+    3px -3px 5px rgba(6, 103, 176, 0.769),
+    /* 위쪽, 오른쪽 그림자 */
+    -3px -3px 5px rgba(6, 103, 176, 0.769);
+  /* 위쪽, 왼쪽 그림자 */
+}
+
+.mic-button img {
+  width: 100%;
+  height: 100%;
+  transition: filter 0.3s ease;
+  /* Smooth transition for the glow effect */
+}
+
+.mic-button:hover img {
+  filter: drop-shadow(0 0 5px rgb(252, 252, 252));
+  /* Glow effect */
+  transform: translateY(-1px);
+}
+
+.mic-stop-button {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  flex-shrink: 0;
+  /* 축소 방지 */
+  background-color: transparent;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 3px 3px 5px rgba(152, 44, 20, 0.911),
+    /* 아래쪽, 오른쪽 그림자 */
+    -3px 3px 5px rgba(152, 44, 20, 0.911),
+    /* 아래쪽, 왼쪽 그림자 */
+    3px -3px 5px rgba(152, 44, 20, 0.911),
+    /* 위쪽, 오른쪽 그림자 */
+    -3px -3px 5px rgba(152, 44, 20, 0.911);
+  /* 위쪽, 왼쪽 그림자 */
+}
+
+.mic-stop-button img {
+  width: 100%;
+  height: 100%;
+  transition: filter 0.3s ease;
+  /* Smooth transition for the glow effect */
+}
+
+.mic-stop-button:hover img {
+  filter: drop-shadow(0 0 5px rgb(29, 28, 28));
+  /* Glow effect */
+  transform: translateY(-1px);
+}
+
+.speaker-button {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  /* 축소 방지 */
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 3px 3px 5px rgba(227, 179, 47, 0.911),
+    /* 아래쪽, 오른쪽 그림자 */
+    -3px 3px 5px rgba(227, 179, 47, 0.911),
+    /* 아래쪽, 왼쪽 그림자 */
+    3px -3px 5px rgba(227, 179, 47, 0.911),
+    /* 위쪽, 오른쪽 그림자 */
+    -3px -3px 5px rgba(227, 179, 47, 0.911);
+  /* 위쪽, 왼쪽 그림자 */
+}
+
+.speaker-button img {
+  width: 100%;
+  height: 100%;
+  transition: filter 0.3s ease;
+  /* Smooth transition for the glow effect */
+}
+
+.speaker-button:hover img {
+  filter: drop-shadow(0 0 5px rgb(254, 254, 254));
+  /* Glow effect */
+  transform: translateY(-1px);
+}
+
+.input-box {
+  display: flex !important;
+  /* Flexbox 컨테이너로 설정 */
+}
+
+.user-input-box {
+  width: 70%;
+  height: 175px;
+  margin-left: 20px;
+  border-radius: 40px;
+  margin-top: 10px;
+  background-color: rgb(49, 49, 49);
+  box-shadow: 4px 4px 6px rgb(27, 28, 28),
+    /* 아래쪽, 오른쪽 그림자 */
+    -4px 4px 6px rgb(27, 28, 28),
+    /* 아래쪽, 왼쪽 그림자 */
+    4px -4px 6px rgb(27, 28, 28),
+    /* 위쪽, 오른쪽 그림자 */
+    -4px -4px 6px rgb(27, 28, 28);
+  /* 위쪽, 왼쪽 그림자 */
+  align-items: center;
+  display: flex;
+  /* Flexbox 사용 */
+}
+
+.keyword-box {
+  display: block;
+  /* 또는 inline-block */
+  text-align: center;
+  font-weight: bold;
+  margin-left: 20px;
+  font-family: 'GmarketSansMedium', sans-serif;
+  color: aliceblue;
+}
+
+#keyword {
+  margin-top: 5px;
+  width: 200px;
+  /* 너비 유지 */
+  height: 120px;
+  /* 높이 유지 */
+  border-radius: 30px;
+  box-shadow: 4px 4px 6px rgb(27, 28, 28),
+    -4px 4px 6px rgb(27, 28, 28),
+    4px -4px 6px rgb(27, 28, 28),
+    -4px -4px 6px rgb(27, 28, 28);
+  background-color: rgb(156, 156, 156);
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  /* 스크롤바 추가 (선택 사항) */
+}
+
+#keyword textarea {
+  /* #keyword 안의 p 태그 스타일 */
+  margin: 0;
+  /* p 태그 기본 마진 제거 */
+  word-wrap: break-word;
+  /* 긴 단어 줄바꿈 */
+  white-space: pre-wrap;
+  /* 여러 줄 텍스트 및 공백 유지 */
+  height: 85px;
+  background-color: rgb(156, 156, 156);
+  border-color: rgb(156, 156, 156);
+}
+
+.rest-box {
+  flex-direction: column;
+  text-align: center;
+  font-weight: bold;
+  margin-left: -30px;
+  margin-right: 40px;
+  font-family: 'GmarketSansMedium', sans-serif;
+  color: aliceblue;
+}
+
+.attitude-box {
+  margin-left: 37px;
+}
+
+.attitude-box select {
+  border-radius: 30px;
+  font-family: 'GmarketSansMedium', sans-serif;
+  font-size: 15px;
+}
+
+.radio-box {
+  display: block;
+  /* 또는 inline-block */
+  width: 200px;
+  margin-top: 20px;
+  margin-left: 30px;
+  text-align: center;
+  font-family: 'GmarketSansMedium', sans-serif;
+  color: aliceblue;
+  font-size: 15px;
+}
+
+
+.enter-button {
+  width: 100px;
+  height: 100px;
+  margin-left: 80%;
+  margin-top: -110px;
+  flex-shrink: 0;
+  /* 축소 방지 */
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.enter-button img {
+  width: 100%;
+  height: 100%;
+  transition: filter 0.3s ease;
+  /* Smooth transition for the glow effect */
+}
+
+.enter-button:hover img {
+  filter: drop-shadow(0 0 5px rgb(254, 254, 254));
+  /* Glow effect */
+  transform: translateY(-1px);
+}
+
+.bubble {
+  background-color: #c1bf7f;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin: 10px 0;
+  width: 45%;
+  margin-top: 5px;
+  margin-left: 20px;
+  position: relative;
+  word-wrap: break-word;
+  font-family: 'GmarketSansMedium', sans-serif;
+  font-weight: bold;
+}
+
+.user_bubble {
+  display: inline-block;
+  background-color: #0dd761b1;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin: 10px 0;
+  margin-top: 5px;
+  min-width: 30%;
+  min-height: 8%;
+  max-width: 60%;
+  word-wrap: break-word;
+  margin-left: auto;
+  /* 왼쪽 마진 자동으로 설정 (오른쪽으로 밀림) */
+  margin-right: 20px;
+  /* 오른쪽 마진 설정 */
+  font-family: 'GmarketSansMedium', sans-serif;
+  font-weight: bold;
+}
+
+
+.loading-domino {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  /* 원하는 크기에 맞게 조절 */
+  height: 20px;
+  margin-left: 50px;
+}
+
+.domino-block {
+  width: 20px;
+  height: 20px;
+  background-color: #555;
+  margin: 0 2px;
+  transform-origin: bottom left;
+  /* 회전 기준점 설정 */
+  animation: fallDomino 1s ease-in-out infinite;
+  /* 애니메이션 적용 */
+}
+
+.domino-block:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.domino-block:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.domino-block:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.domino-block:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.domino-block:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+@keyframes fallDomino {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.call-decline-button {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  /* 축소 방지 */
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  position: absolute;
+  cursor: pointer;
+  margin-left: 85%;
+  margin-top: -180px;
+}
+
+.call-decline-button img {
+  width: 100%;
+  height: 100%;
+  transition: filter 0.3s ease;
+  /* Smooth transition for the glow effect */
+}
+
+.call-decline-button:hover img {
+  filter: drop-shadow(0 0 5px rgb(241, 4, 4));
+  /* Glow effect */
+  transform: translateY(-1px);
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>번호 입력 페이지</title>
+  <link rel="shortcut icon" href="#">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="assets/css/calling_pad.css">
+</head>
+<body>
+    <div id="left-half">
+      <img src="assets\images\logo.png" alt="로고 이미지">
+    </div>
+    <div id="center-half">
+      <div class="status-bar"> 
+        <span id="current-time"></span>
+        <img id="dynamic-island" src="assets/images/dynamic_island.png" alt="와이파이">
+        <img id="wifi-icon" src="assets/images/wifi2.png" alt="와이파이">
+        <img id="battery-icon" src="assets/images/battery2.png" alt="배터리">
+      </div>
+      <div class="calling-container">
+        <div class="text-box"></div> 
+        <div class="button-box">
+            <div class="number-box"></div>
+                <button class="number-button">1</button>
+                <button class="number-button">2</button>
+                <button class="number-button">3</button>
+            </div>
+            <div class="number-box">
+                <button class="number-button">4</button>
+                <button class="number-button">5</button>
+                <button class="number-button">6</button>
+            </div> 
+            <div class="number-box">
+                <button class="number-button">7</button>
+                <button class="number-button">8</button>
+                <button class="number-button">9</button>
+            </div> 
+            <div class="number-box">
+                <button class="number-button">*</button>
+                <button class="number-button">0</button>
+                <button class="number-button">#</button>
+            </div>
+          </div>
+        <div class="order-box">
+            <button class="calling-button">
+                <img src="assets/images/calling.png" alt="전화">
+            </button>
+            <button class="remove-button">
+                <img src="assets/images/remove_button.png" alt="지우기">
+            </button>
+        </div>
+      </div>
+    </div>
+    <div id="right-half"></div>
+  <script src="assets/js/calling_pad.js"></script>
+</body>
+</html>

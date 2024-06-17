@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>전화 페이지</title>
+  <link rel="shortcut icon" href="#">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="assets/css/calling.css">
+</head>
+<body>
+    <div id="left-half">
+      <img src="assets\images\logo.png" alt="로고 이미지">
+    </div>
+    <div id="center-half">
+      <div class="status-bar"> 
+        <span id="current-time"></span>
+        <img id="dynamic-island" src="assets/images/dynamic_island.png" alt="와이파이">
+        <img id="wifi-icon" src="assets/images/wifi2.png" alt="와이파이">
+        <img id="battery-icon" src="assets/images/battery2.png" alt="배터리">
+      </div>
+      <div class="calling-container">
+        <div class="chat-box">
+
+        </div>
+        <div class="user-box">
+          <div class="send-box">
+            <div class="text-box"></div>
+            <button class="mic-stop-button">
+              <img src="assets/images/mic_stop.png" alt="마이크 중단">
+            </button>
+            <button class="mic-button">
+              <img src="assets/images/mic_start.png" alt="마이크">
+            </button>
+            <button class="speaker-button">
+              <img src="assets/images/speaker1.png" alt="스피커">
+            </button>
+          </div>
+          <div calss="input-box">
+            <div class="user-input-box">
+              <div class="keyword-box">
+                <label for="key">핵심 문장/단어</label>
+                <div id="keyword">
+                  <textarea></textarea>
+                </div>
+              </div>
+              <div class="rest-box">
+                <div class="attitude-box">
+                  <label for="attitude">문장 형식</label>
+                  <select id="sentenceType" name="sentenceType">
+                    <option value="명령문">명령문</option>
+                    <option value="의문문">의문문</option>
+                    <option value="서술문">서술문</option>
+                    <option value="청유문">청유문</option>
+                    <option value="감탄문">감탄문</option>
+                  </select>
+                </div>
+                <div class="radio-box">
+                  <input type="radio" id="informal" name="speech-level" value="반말">
+                  <label for="informal">반말</label>
+                  <input type="radio" id="formal" name="speech-level" value="존댓말">
+                  <label for="formal">존댓말</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="enter-button">
+            <img src="assets/images/enter4.png" alt="엔터버튼">
+          </button>
+          <button class="call-decline-button">
+            <img src="assets/images/end-call-icon.png" alt="통화 종료">
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="right-half"></div>
+    <script type="module" src="assets/js/calling.js"></script>
+</body>
+</html>

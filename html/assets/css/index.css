@@ -1,0 +1,147 @@
+body,
+html {
+  height: 100%;
+  /* body와 html 높이를 화면 전체로 설정 */
+  margin: 0;
+  /* 기본 마진 제거 */
+  background-color: #DAE0EE;
+  /* 하늘색 배경 */
+}
+
+#left-half {
+  width: 50%;
+  /* 각 영역 너비 50% */
+  height: 100%;
+  /* 각 영역 높이 100% */
+  float: left;
+  /* 왼쪽으로 플로팅 */
+}
+
+#left-half img {
+  width: 700px;
+  height: 700px;
+  display: block;
+  /* 인라인 요소를 블록 요소로 변환 */
+  margin: auto;
+  /* 자동으로 가운데 정렬 */
+  margin-top: 100px;
+}
+
+
+#center-half {
+  width: 40%;
+  height: 100%;
+  /* 각 영역 높이 100% */
+  float: left;
+  /* 왼쪽으로 플로팅 */
+  background-color: rgba(77, 95, 131, 0.644);
+  /* 흰색 배경 */
+  box-shadow: 4px 4px 6px rgba(91, 91, 92, 0.5),
+    /* 아래쪽, 오른쪽 그림자 */
+    -4px 4px 6px rgba(91, 91, 92, 0.5),
+    /* 아래쪽, 왼쪽 그림자 */
+    4px -4px 6px rgba(91, 91, 92, 0.5),
+    /* 위쪽, 오른쪽 그림자 */
+    -4px -4px 6px rgba(91, 91, 92, 0.5);
+  /* 위쪽, 왼쪽 그림자 */
+  display: flex;
+  /* Flexbox 사용 */
+  flex-direction: column;
+  /* 세로 방향 배치 */
+  justify-content: center;
+  /* 세로 중앙 정렬 */
+  align-items: center;
+  /* 가로 중앙 정렬 */
+
+}
+
+#right-half {
+  width: 10%;
+  /* 각 영역 너비 50% */
+  height: 100%;
+  /* 각 영역 높이 100% */
+}
+
+
+.container {
+  padding: 30px;
+  border-radius: 60px;
+  box-shadow: 5px 5px 10px rgba(41, 41, 41, 0.1),
+    /* 아래쪽, 오른쪽 그림자 */
+    -5px 5px 10px rgba(41, 41, 41, 0.1),
+    /* 아래쪽, 왼쪽 그림자 */
+    5px -5px 10px rgba(41, 41, 41, 0.1),
+    /* 위쪽, 오른쪽 그림자 */
+    -5px -5px 10px rgba(41, 41, 41, 0.1);
+  /* 위쪽, 왼쪽 그림자 */
+  display: flex;
+  /* Flexbox 활성화 */
+  flex-direction: column;
+  /* 세로 방향 정렬 유지 */
+  align-items: center;
+  /* 가로 중앙 정렬 */
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  /* 흰색 배경, 불투명도 0.8 (80%) */
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.logo-container img {
+  max-width: 150px;
+}
+
+.form-container h2 {
+  font-size: 25px;
+  margin-bottom: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 280;
+  color: #6e633c;
+  /* 원하는 색상으로 변경 */
+}
+
+#username {
+  width: 70%;
+  padding: 15px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.76);
+  border-radius: 30px;
+}
+
+#login-button {
+  background-color: #2b27f3;
+  box-shadow: 2px 2px 4px rgba(6, 98, 235, 0.836),
+    /* 아래쪽, 오른쪽 그림자 */
+    -2px 2px 4px rgba(6, 98, 235, 0.836),
+    /* 아래쪽, 왼쪽 그림자 */
+    2px -2px 4px rgba(6, 98, 235, 0.836),
+    /* 위쪽, 오른쪽 그림자 */
+    -2px -2px 4px rgba(6, 98, 235, 0.836);
+  /* 위쪽, 왼쪽 그림자 */
+  justify-content: center;
+  /* 가로 중앙 정렬 */
+  color: white;
+  padding: 12px 20px;
+  display: block;
+  /* 버튼을 블록 요소로 변경하여 가로 너비를 100%로 설정 */
+  margin: 0 auto;
+  /* 버튼의 좌우 여백을 자동으로 설정하여 가운데 정렬 */
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#login-button:hover {
+  background-color: rgba(22, 65, 122, 0.521);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+  color: #ffffff;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  /* 부드러운 전환 효과 */
+}

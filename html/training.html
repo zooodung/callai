@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>연습 페이지</title>
+  <link rel="shortcut icon" href="#">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel='stylesheet' type='text/css'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/css/training.css">
+</head>
+<body>
+    <div id="left-half">
+      <img src="assets\images\logo.png" alt="로고 이미지">
+    </div>
+    <div id="center-half">
+      <div class="status-bar"> 
+        <span id="current-time"></span>
+        <img id="dynamic-island" src="assets/images/dynamic_island.png" alt="와이파이">
+        <img id="wifi-icon" src="assets/images/wifi2.png" alt="와이파이">
+        <img id="battery-icon" src="assets/images/battery2.png" alt="배터리">
+      </div>
+      <div class="training-container">
+        <div id="chat-box"></div>
+        <div class="mic-bar">
+          <button class="mic-stop-button">
+            <img src="assets/images/mic_stop.png" alt="마이크 중단">
+          </button>
+          <button class="mic-button">
+            <img src="assets/images/mic_start.png" alt="마이크">
+          </button>
+          <button class="call-decline-button">
+            <img src="assets/images/end-call-icon2.png" alt="연습 종료">
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="right-half"></div>
+    <script type="module" src="assets/js/training.js"></script>
+</body>
+</html>
