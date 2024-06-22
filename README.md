@@ -22,5 +22,8 @@
 ![image](https://github.com/zooodung/callai/assets/106976486/106a317f-b4df-42ed-ab26-d75f6aae02ab)
 ![image](https://github.com/zooodung/callai/assets/106976486/ecc11648-1eeb-495a-9577-0e4fc2cad26f)
 
+## 사용 기술 및 프레임워크
+해당 부분 추가 부탁드립니다.
+
 ## Contact Us
 ![image](https://github.com/zooodung/callai/assets/106976486/28a2dc94-87e0-49ef-bd46-5bdb144569d9)
